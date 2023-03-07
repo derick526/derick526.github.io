@@ -210,7 +210,7 @@ button {
     right: 8px;
 }
 
-/* Tablet Responsive layout - when the screen is less than 744px wide, make card row 2 columns instead of 4 */
+/* Tablet Responsive layout - when the screen is less than 744px wide */
 @media (max-width: 834px) {
 
 /* === HEADINGS === */
@@ -288,7 +288,7 @@ button {
 }
 
 
-/* Mobile Responsive layout - when the screen is less than 600px wide, make card row 2 columns instead of 4 */
+/* Mobile Responsive layout - when the screen is less than 600px wide */
 @media (max-width: 600px) {
   
 /* === HEADINGS === */
