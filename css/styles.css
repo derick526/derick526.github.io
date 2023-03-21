@@ -9,6 +9,10 @@
     font-weight: 500;
 }
 
+/* html {
+    scroll-behavior: smooth;
+} */
+
 body {
     background-color: #0E0B0C;
 }
@@ -25,29 +29,49 @@ h1 {
 }
 
 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+
+h3 {
     color: #fff;
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-h3 {
+h4 {
     font-size: 1.125rem;
     font-weight: bold;
     line-height: 1.5rem;
-    /* display: block; */
     width: 100%;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    margin: 4rem 10rem;
+    border-bottom: solid 1px #666;
+    
 }
 
 
 /* === NAVIGATION === */
 
-a {
+a.logo {
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
     font-size: 1.25rem;
     text-decoration: none;
     transition: all .3s;
 }
 
-a:hover {
+nav a:hover {
     background-color: rgba(51, 51, 51, 0.7);
     color: #ccc;
     border-radius: 0.5rem;
@@ -92,11 +116,11 @@ nav {
     color: #FAEBEE;
 }
 
-.nav-link, .nav-link-active {
+.menu-link, .menu-link-active {
     padding: 0.5rem;
 }
 
-.nav-link-active {
+.menu-link-active {
     background-color: rgba(51, 51, 51, 0.7);
     border-radius: 0.5rem;
 }
@@ -107,7 +131,17 @@ nav {
 .hero-container {
     width: 100%;
     height: 80vh;
-    background: url(../images/hero-img.jpg) no-repeat fixed center;
+    position: relative;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .overlay {
@@ -174,7 +208,7 @@ button {
 
 /* === CARDS === */
 
-.card-img {
+.tile-img {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -183,13 +217,13 @@ button {
     box-shadow: 0px 0px 4px 2px rgba(56, 46, 48, 0.2);
 }
 
-.card-row {
+.tile-row {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
 }
 
-.card {
+.tile {
     display: block;
     width: 100%;
 }
@@ -225,6 +259,16 @@ button {
     right: 8px;
 }
 
+/* ===FOOTER=== */
+input#newsletter1::placeholder {
+    color: #adb5bd;
+}
+  
+.form-button {
+    box-shadow: 0px 16px 32px 0px rgba(188, 51, 83, 0.1);
+    border: none;
+}
+
 /* Tablet Responsive layout - when the screen is less than 744px wide */
 @media (max-width: 834px) {
 
@@ -237,6 +281,15 @@ button {
         text-shadow: 0px 4px 104px black;
     }
 
+    .page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    margin: 4rem 4rem;
+    border-bottom: solid 1px #666;
+    
+}
 
 
 /* === NAVIGATION === */
@@ -252,7 +305,7 @@ button {
         position: static;
     }
 
-    .nav-link, .nav-link-active {
+    .menu-link, .menu-link-active {
         padding: 0.375rem;
     }
 
@@ -274,8 +327,18 @@ button {
 /* === HERO SECTION === */
 .hero-container {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background: url(../images/hero-img.jpg) no-repeat fixed center;
+    height: 80vh;
+    position: relative;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 header {
@@ -329,6 +392,16 @@ h1 {
     font-weight: 800;
     line-height: 3rem;
     text-shadow: 0px 4px 104px black;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    margin: 4rem 2rem;
+    border-bottom: solid 1px #666;
+    
 }
 
 /* === NAVIGATION === */
@@ -411,6 +484,16 @@ h1 {
     text-shadow: 0px 4px 104px black;
 }
 
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    margin: 4rem 1rem;
+    border-bottom: solid 1px #666;
+    
+}
+
 
 
 /* === NAVIGATION === */
@@ -426,7 +509,7 @@ h1 {
     position: static;
 }
 
-.nav-link, .nav-link-active {
+.menu-link, .menu-link-active {
     padding: 0.375rem;
 }
 
@@ -479,4 +562,14 @@ button {
     margin: 4rem auto;
     width: 100%;
 }
+}
+
+/* ===FOOTER=== */
+input#newsletter1::placeholder {
+  color: #adb5bd;
+}
+
+.form-button {
+    box-shadow: 0px 16px 32px 0px rgba(188, 51, 83, 0.1);
+    border: none;
 }
